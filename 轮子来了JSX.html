@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="build/react.js"></script>
+		
+		<script src="build/react-dom.js"></script>
+		<script src="build/browser.min.js"></script>
+		<style>
+			.ez-led{
+			font-family : "LED";
+			font-size : 40px;
+			background : #70d355;
+			width: 300px;
+			height:60px;
+			line-height : 60px;
+			text-align : right;
+			padding : 10px;
+			letter-spacing:5px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="content"></div>
+		<script type="text/babel">
+			//定义React组件
+			var EzLedComp=React.createClass({
+				render:function(){
+					var e=
+					<div>
+						<div className="ez-led">Hello, React!</div>
+						<div className="ez-led">2015-04-15</div>
+					</div>
+					return e;
+				}
+				
+			});
+			
+			
+			React.render(
+			    <EzLedComp/>,//JSX
+			    document.querySelector("#content"));
+		</script>
+		
+	</body>
+</html>

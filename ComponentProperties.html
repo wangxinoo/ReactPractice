@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="build/react.js"></script>
+		
+		<script src="build/react-dom.js"></script>
+		<script src="build/browser.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="content"></div>
+		<script type="text/babel">
+			var Comment=React.createClass({
+				render:function(){
+					return(
+					<div className="comment">
+						<h2 className="commentAuthor">
+							I am {this.props.author}
+						</h2>
+					
+					</div>
+					);
+					
+				}
+				
+			});
+			ReactDOM.render(
+			    <Comment author="王欣"/>,
+			    document.getElementById('content')
+			);
+		</script>
+		
+	</body>
+</html>

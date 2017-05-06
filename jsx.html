@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="build/react.js"></script>
+		
+		<script src="build/react-dom.js"></script>
+		<script src="build/browser.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="content"></div>
+		<script type="text/babel">
+			var names=['xin','juan','yang'];
+			ReactDOM.render(
+				<div>
+					{
+						names.map(function(name){
+						 return <div>Hello, {name}!</div>
+					})
+					}
+					
+				</div>,
+				document.getElementById('content')
+			)
+		</script>
+		
+	</body>
+</html>
